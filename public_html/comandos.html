@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos - Mario V. Canalejas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="header"></div>
+    <main class="command-main">
+        <section class="left">
+            <h4 class="command-name">Unix</h4>
+            <p>Resumen del uso de los comandos Unix utilizados en las clases del módulo.</p>
+            <table class="command-table">
+                <thead>
+                    <tr>
+                        <th class="command-th">Comando</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>man</code></td>
+                        <td>Paginador de manuales del sistema Linux.</td>
+                    </tr>
+                    <tr>
+                        <td><code>traceroute</code></td>
+                        <td>Muestra en pantalla la ruta que los paquetes trazan hasta el host.</td>
+                    </tr>
+                    <tr>
+                        <td><code>ifconfig</code></td>
+                        <td>Se usa para mostrar y configurar un interfaz de red.</td>
+                    </tr>
+                    <tr>
+                        <td><code>ip <i>a</i></code></td>
+                        <td>Otra forma de mostrar la configuración de las interfaces de red del sistema.</td>
+                    </tr>
+                    <tr>
+                        <td><code>ping <i>-qc</i> <i>10</i> 10.0.0.1</code></td>
+                        <td>Envía <i>10</i> paquetes de ping a un destino <i>10.0.0.1</i> y sólo muestra un resumen final de los resultados (de ahí <i>-q</i>, que lo hace de forma silenciosa).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="right">
+            <h4 class="command-name">Kathará</h4>
+            <p>Resumen del uso de los comandos de Kathará utilizados en las clases del módulo.</p>
+            <table class="command-table">
+                <thead>
+                    <tr>
+                        <th class="command-th">Comando</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>man kathara</code></td>
+                        <td>Manuales de Kathará.</td>
+                    </tr>
+                    <tr>
+                        <td><code>kathara vstart -n 'pc1'<br>
+                                  kathara vclean -n 'pc1'</code></td>
+                        <td>Creación de un sólo host con nombre 'pc1' y eliminación de la misma.</td>
+                    </tr>
+                    <tr>
+                        <td><code>kathara vstart -n pc1 --eth 0:A</code></td>
+                        <td>Host individual de Kathará inciado con nombre 'pc1' y conexión ethernet en el mismo dominio de colisión 'A'.</td>
+                    </tr>
+                    <tr>
+                        <td><code>kathara lstart<br>
+                                  kathara lclean</code></td>
+                        <td>Comando usado para el inicio y eliminación de un laboratorio.</td>
+                    </tr>
+                    <tr>
+                        <td><code>tcpdump -w /shared/captura.pcap</code></td>
+                        <td>Captura de paquetes.</td>
+                    </tr>
+                    <tr>
+                        <td><code>tcpdump -tenni eth0 -w /shared/captura.pcap</code></td>
+                        <td>Igual que el comando anterior, pero sólo escuchando la salida <i>eht0</i>.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <div id="footer"></div>
+    <script src="script/loadHTML.js"></script>
+    <script>
+        loadHTML("header", "components/header.html");
+        loadHTML("footer", "components/footer.html");
+    </script>
+</body>
+</html>
